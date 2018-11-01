@@ -16,16 +16,16 @@ RESTFul API for a basic billing project
 - Retrieve all the data of the current path.
 - Returns a json like this:
 
-{
-       &nbsp;&nbsp;"count": number of records returned,
-    &nbsp;&nbsp;"data": [
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"key1": "value1",
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"key2: "value2",
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"key3": "value3",
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}...
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
-}
+        {
+               "count": number of records returned,
+            "data": [
+                {
+                    "key1": "value1",
+                    "key2: "value2",
+                    "key3": "value3",
+                }...
+            ]
+        }
 
 #### /insert
  - POST verb.
