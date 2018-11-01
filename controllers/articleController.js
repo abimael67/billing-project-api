@@ -68,7 +68,7 @@ module.exports.toggle_article_status = (req, res, next) => {
 
 module.exports.update_article = (req, res, next) => {    
     var articleId = req.body._id;
-    Article.findByIdAndUpdate(articleId, req.body)
+    Article.findByIdAndUpdate(articleId, {description: req.body.description, unit_price:req.body.unit_price})
     .lean()
     .select('-__v')    
     .exec()
