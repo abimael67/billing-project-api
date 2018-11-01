@@ -6,7 +6,7 @@ const {Article} = require('../models/articleModel');
 
 module.exports.insert_article = (req, res, next) => {
     var body = req.body
-    var newArticle = new Article(body);
+    var newArticle = new Article({description:body.description, unit_price:body.unit_price});
 
     newArticle.save().then(() => {
         res.status(200).json(newArticle.toObject());
