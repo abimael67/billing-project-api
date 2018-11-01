@@ -15,5 +15,5 @@ app.use('/articles', articleRoute)
 app.use('/customers', customerRoute)
 app.use('/sellers', sellerRoute)
 app.use('/bills', billRoute)
-app.get('/', ((req,res)=> res.status(200).send('Welcome to Billing API')))
+app.get('/', ((req,res)=> res.status(200).send('Welcome Luigi to Billing API')))
 module.exports = app
