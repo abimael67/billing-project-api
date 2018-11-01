@@ -18,7 +18,10 @@ module.exports.insert_article = (req, res, next) => {
 };
 
 module.exports.get_articles = (req, res, next) => {
-    Article.find({})
+    let criteria = {status : 'Active'}
+    if(req.query.showInactives === 'true')
+        criteria = {}
+    Article.find(criteria)
     .exec()
     .then(articleList => {
         if (articleList) {
