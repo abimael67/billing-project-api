@@ -6,7 +6,7 @@ const {Customer} = require('../models/customerModel');
 
 module.exports.insert_customer = (req, res, next) => {
     var body = req.body
-    var newCustomer = new Customer(body);
+    var newCustomer = new Customer({name:req.body.name, identification:req.body.identification, account:req.body.account});
 
     newCustomer.save().then(() => {
         res.status(200).json(newCustomer.toObject());
