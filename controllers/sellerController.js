@@ -18,7 +18,11 @@ module.exports.insert_seller = (req, res, next) => {
 };
 
 module.exports.get_sellers = (req, res, next) => {
-    Seller.find({})
+    let criteria = {}  
+    if(req.query.name)
+        criteria = Object.assign({}, criteria, {name: { '$regex' : req.query.name, '$options' : 'i' }})
+       
+    Seller.find(criteria)
     .exec()
     .then(sellerList => {
         if (sellerList) {

@@ -18,7 +18,12 @@ module.exports.insert_customer = (req, res, next) => {
 };
 
 module.exports.get_customers = (req, res, next) => {
-    Customer.find({})
+    let criteria = {}  
+    if(req.query.name)
+        criteria = Object.assign({}, criteria, {name: { '$regex' : req.query.name, '$options' : 'i' }})
+    if(req.query.id)
+        criteria = Object.assign({}, criteria, {identification: { '$regex' : req.query.id, '$options' : 'i' }})
+    Customer.find(criteria)
     .exec()
     .then(customerList => {
         if (customerList) {

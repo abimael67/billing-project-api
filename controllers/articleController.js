@@ -21,6 +21,8 @@ module.exports.get_articles = (req, res, next) => {
     let criteria = {status : 'Active'}
     if(req.query.showInactives === 'true')
         criteria = {}
+    if(req.query.desc)
+        criteria = Object.assign({}, criteria, {description: { '$regex' : req.query.desc, '$options' : 'i' }})
     Article.find(criteria)
     .exec()
     .then(articleList => {
@@ -89,3 +91,4 @@ module.exports.update_article = (req, res, next) => {
         console.log(err);
     });
 };
+
