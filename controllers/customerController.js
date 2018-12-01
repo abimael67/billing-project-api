@@ -23,6 +23,8 @@ module.exports.get_customers = (req, res, next) => {
         criteria = Object.assign({}, criteria, {name: { '$regex' : req.query.name, '$options' : 'i' }})
     if(req.query.id)
         criteria = Object.assign({}, criteria, {identification: { '$regex' : req.query.id, '$options' : 'i' }})
+    if(req.query._id)
+        criteria = Object.assign({}, criteria, {_id: req.query._id})
     Customer.find(criteria)
     .exec()
     .then(customerList => {
