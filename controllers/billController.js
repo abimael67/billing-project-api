@@ -18,7 +18,10 @@ module.exports.insert_bill = (req, res, next) => {
 };
 
 module.exports.get_bills = (req, res, next) => {
-    Bill.find({})
+     let criteria = {}     
+    if(req.query._id)
+        criteria = Object.assign({}, criteria, {_id: req.query._id})
+    Bill.find(criteria)
     .exec()
     .then(billList => {
         if (billList) {
