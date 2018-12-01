@@ -1,0 +1,68 @@
+ {
+   
+      "seller": "5bda80972ca0f3286c96099c",
+      "customer": "5bddaa5a19503400161c3c54",
+      "comment": "Factura de venta 1",
+      "details": [
+        {
+          "_id": "5bda803c2ca0f3286c960999",
+          "article": "5bda76fe42805725d8e4e5b7",
+          "amount": 1,
+          "unit_price": 2000
+        },
+        {
+          "_id": "5bda803c2ca0f3286c960998",
+          "article": "5bda65921e79b91e7c45fb16",
+          "amount": 2,
+          "unit_price": 1500
+        }
+      ],
+      "bill_number": 1000
+      
+}
+
+ {
+   
+      "seller": "5bda80972ca0f3286c96099c",
+      "customer": "5bddaa5a19503400161c3c54",
+      "comment": "Factura de venta 3",
+      "details": [
+        {
+          "_id": "5bda803c2ca0f3286c960999",
+          "article": "5bda76fe42805725d8e4e5b7",
+          "amount": 3,
+          "unit_price": 1500
+        },
+        {
+          "_id": "5bda803c2ca0f3286c960998",
+          "article": "5bda65921e79b91e7c45fb16",
+          "amount": 5,
+          "unit_price": 1500
+        }
+      ],
+      "bill_number": 1000
+      
+}
+
+ {
+   
+      "seller": "5bda80972ca0f3286c96099c",
+      "customer": "5bddaa5a19503400161c3c54",
+      "comment": "Factura de venta 4",
+      "details": [
+        {
+          "_id": "5bda803c2ca0f3286c960999",
+          "article": "5bda76fe42805725d8e4e5b7",
+          "amount": 5,
+          "unit_price": 2000
+        },
+        {
+          "_id": "5bda803c2ca0f3286c960998",
+          "article": "5bda65921e79b91e7c45fb16",
+          "amount": 3,
+          "unit_price": 1500
+        }
+      ],
+      "bill_number": 1000
+      
+}
