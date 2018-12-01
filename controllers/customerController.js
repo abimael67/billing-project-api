@@ -18,7 +18,7 @@ module.exports.insert_customer = (req, res, next) => {
 };
 
 module.exports.get_customers = (req, res, next) => {
-    let criteria = {}  
+    let criteria = {status:'Active'}  
     if(req.query.name)
         criteria = Object.assign({}, criteria, {name: { '$regex' : req.query.name, '$options' : 'i' }})
     if(req.query.id)
