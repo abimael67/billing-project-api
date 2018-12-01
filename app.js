@@ -10,10 +10,11 @@ const articleRoute = require('./routes/articleRoutes');
 const customerRoute = require('./routes/customerRoutes');
 const sellerRoute = require('./routes/sellerRoute');
 const billRoute = require('./routes/billRoute');
-
+const accountingMoveRoute = require('./routes/accountingMoveRoutes');
 app.use('/articles', articleRoute)
 app.use('/customers', customerRoute)
 app.use('/sellers', sellerRoute)
 app.use('/bills', billRoute)
-app.get('/', ((req,res)=> res.status(200).send('Welcome Luigi to Billing API')))
+app.use('/accounting', accountingMoveRoute)
+app.get('/', ((req,res)=> res.status(200).send('Welcome to Billing API')))
 module.exports = app
