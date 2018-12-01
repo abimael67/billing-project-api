@@ -23,6 +23,8 @@ module.exports.get_articles = (req, res, next) => {
         criteria = {}
     if(req.query.desc)
         criteria = Object.assign({}, criteria, {description: { '$regex' : req.query.desc, '$options' : 'i' }})
+    if(req.query._id)
+        criteria = Object.assign({}, criteria, {_id: req.query._id})
     Article.find(criteria)
     .exec()
     .then(articleList => {

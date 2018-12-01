@@ -21,6 +21,8 @@ module.exports.get_sellers = (req, res, next) => {
     let criteria = {}  
     if(req.query.name)
         criteria = Object.assign({}, criteria, {name: { '$regex' : req.query.name, '$options' : 'i' }})
+    if(req.query._id)
+        criteria = Object.assign({}, criteria, {_id: req.query._id})
        
     Seller.find(criteria)
     .exec()
